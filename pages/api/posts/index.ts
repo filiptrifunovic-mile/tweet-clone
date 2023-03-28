@@ -29,7 +29,7 @@ export default async function handler(
       let posts;
 
       if (userId && typeof userId === "string") {
-        posts = prisma.post.findMany({
+        posts = await prisma.post.findMany({
           where: {
             userId,
           },
