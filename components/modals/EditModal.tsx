@@ -16,14 +16,14 @@ const EditModal = () => {
   const [profileImage, setProfileImage] = useState("");
   const [coverImage, setCoverImage] = useState("");
   const [name, setName] = useState("");
-  const [userName, setUserName] = useState("");
+  const [username, setUsername] = useState("");
   const [bio, setBio] = useState("");
 
   useEffect(() => {
     setProfileImage(currentUser?.profileImage);
     setCoverImage(currentUser?.coverImage);
     setName(currentUser?.name);
-    setUserName(currentUser?.username);
+    setUsername(currentUser?.username);
     setBio(currentUser?.bio);
   }, [
     currentUser?.profileImage,
@@ -41,7 +41,7 @@ const EditModal = () => {
 
       await axios.patch("/api/edit", {
         name,
-        userName,
+        username,
         profileImage,
         coverImage,
         bio,
@@ -60,7 +60,7 @@ const EditModal = () => {
   }, [
     bio,
     name,
-    userName,
+    username,
     profileImage,
     coverImage,
     editModal,
@@ -89,8 +89,8 @@ const EditModal = () => {
       />
       <Input
         placeholder="Username"
-        onChange={(e) => setUserName(e.target.value)}
-        value={userName}
+        onChange={(e) => setUsername(e.target.value)}
+        value={username}
         disabled={loading}
       />
       <Input
