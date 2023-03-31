@@ -1,4 +1,4 @@
-https://tweet-clone-gray.vercel.app/
+https://tweet-filip.vercel.app/
 
 NEXT JS, TypeSript, Tailwind, MongoDB, Prisma, axios, zustand, next-auth, react-hot-toast, react-spinners
 
